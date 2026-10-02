@@ -1,8 +1,14 @@
 [project]
 name = "event-consumer-guard"
-version = "0.1.0"
-description = "赛事消费异常联防领域资料"
+version = "0.2.0"
+description = "赛事消费异常联防后端（仅标准库依赖）"
 requires-python = ">=3.11"
+
+[project.scripts]
+event-guard-server = "guard.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.unittest]
 start-directory = "tests"
